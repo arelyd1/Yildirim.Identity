@@ -1,0 +1,26 @@
+﻿@model List<AppRole>
+@{
+    Layout = "_Layout";
+}
+<a asp-action="Create" asp-controller="Role" class="d-inline-block my-2">Yeni Role ekle</a>
+<table class="mt-4 table table/hover table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>CreatedTime</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.CratedTime</td>
+              
+            </tr>
+        }
+    </tbody>
+
+</table>
